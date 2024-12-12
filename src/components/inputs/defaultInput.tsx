@@ -10,12 +10,22 @@ export interface InputProps
 export const Input = React.forwardRef<HTMLInputElement, InputProps>(
   ({ className, errorText, ...props }, ref) => {
     return (
-      <div className={cn(styles["default-input"], className)}>
-        <input
-          ref={ref}
-          className={cn(styles.input, { [styles.error]: errorText })}
-          {...props}
-        />
+      <div className={cn(styles["input-wrapper"], className)}>
+        <div className={styles["input-container"]}>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            className={styles["search-icon"]}
+          >
+            <path d="M11 2a9 9 0 0 1 7.084 14.574l4.242 4.243a1 1 0 0 1-1.415 1.415l-4.243-4.242A9 9 0 1 1 11 2zm0 2a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"></path>
+          </svg>
+          <input
+            ref={ref}
+            className={cn(styles.input, { [styles.error]: errorText })}
+            {...props}
+          />
+        </div>
         {errorText && (
           <div className={styles["error-input"]}>
             <svg

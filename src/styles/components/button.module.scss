@@ -1,11 +1,11 @@
-@import "../variables";
+@use "../variables";
 .button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   padding: 0.5rem 1rem;
   border-radius: 0.375rem;
-  font-family: $fontMedium;
+  font-family: variables.$fontMedium;
   font-size: 1rem;
   border-radius: 8px;
   background: #000000;
@@ -19,30 +19,30 @@
 }
 
 .primary {
-  background-color: $primaryColor;
-  color: $greey;
-  border: 1px solid $primaryColor;
+  background-color: variables.$primaryColor;
+  color: variables.$greey;
+  border: 1px solid variables.$primaryColor;
 }
 
 .secondary {
-  background-color: $greey;
-  color: $secondaryColor;
-  border: 1px solid $secondaryColor;
+  background-color: variables.$greey;
+  color: variables.$secondaryColor;
+  border: 1px solid variables.$secondaryColor;
 }
 
 .outline {
   background-color: transparent;
-  color: $primaryColor;
-  border: 1px solid $primaryColor;
+  color: variables.$primaryColor;
+  border: 1px solid variables.$primaryColor;
 
   &:hover {
-    background-color: $primaryLightColor;
+    background-color: variables.$primaryLightColor;
   }
 }
 
 .text {
   background-color: transparent;
-  color: $primaryColor;
+  color: variables.$primaryColor;
   border: none;
 }
 
