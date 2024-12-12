@@ -1,0 +1,44 @@
+.default-input {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+
+  input {
+    border-radius: 8px;
+    box-shadow: rgba(16, 24, 40, 0.05) 0px 3px 1px -2px,
+      rgba(16, 24, 40, 0.05) 0px 2px 2px 0px,
+      rgba(16, 24, 40, 0.05) 0px 1px 2px 0px;
+    border: 1px solid #d0d5dd;
+    padding: 10px 14px;
+    font: inherit;
+    height: 35px;
+    width: 100%;
+    color: #667085;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+    &:focus {
+      border-color: #667085;
+      outline: none;
+      box-shadow: 0px 0px 0px 4px rgba(16, 24, 40, 0.1);
+    }
+
+    &.error {
+      border-color: #ff4d4f;
+      box-shadow: 0px 0px 0px 4px rgba(255, 77, 79, 0.1);
+    }
+  }
+}
+
+.error-input {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 10px;
+  margin-top: 4px;
+  color: #ff4d4f;
+
+  svg {
+    height: 14px;
+    margin-right: 5px;
+  }
+}
